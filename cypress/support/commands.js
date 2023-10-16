@@ -24,6 +24,15 @@ loginPage.verifyLoginTitle();
 cy.log('************* User Logged In successfully and on Dashboard Screen *************');
 })
 
+Cypress.Commands.add('invalidLogin',(username,password)=>
+{  
+cy.visit(Cypress.env('url'))
+loginPage.setUsername(username);
+loginPage.setPassword(password);
+loginPage.loginClick();
+loginPage.verifyInvalidLoginErrorText();
+cy.log('************* User Logged In successfully and on Dashboard Screen *************');
+})
 
 //
 //
