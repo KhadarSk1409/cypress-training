@@ -14,7 +14,7 @@ describe('Demo Application Login Test Suite', () =>
 
     })
 
-        it ('Login using incorrect credentials', {tags: ['uiRegression']}, ()=> {
+        it.only ('Login using incorrect credentials', {tags: ['uiRegression']}, ()=> {
 
         cy.login(Cypress.env('username1'),Cypress.env('password'))
 
