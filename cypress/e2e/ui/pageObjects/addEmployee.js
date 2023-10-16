@@ -47,6 +47,7 @@ class AddEmployee
    {
    
       const randomUserName = utils.generateString(5);
+      cy.scrollTo('top');
       cy.get(this.clickAddBtn).click();
       cy.wait(5000);
       cy.get(this.addEmpTitle).should('have.text','Add Employee');
