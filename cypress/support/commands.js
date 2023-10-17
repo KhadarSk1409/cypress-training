@@ -31,7 +31,7 @@ loginPage.setUsername(username);
 loginPage.setPassword(password);
 loginPage.loginClick();
 loginPage.verifyInvalidLoginErrorText();
-cy.log('************* User failed to login due to invalid credentials *************');
+cy.log('************* User failed to login due to invalid Credentials *************');
 })
 
 //
